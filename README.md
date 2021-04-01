@@ -4,7 +4,7 @@
 
 ### Datasets
 
-Please navigate to [https://datasets.imdbws.com/]() and download the following datasets:
+Navigate to [https://datasets.imdbws.com/]() and download the following datasets:
 
 - `title.basics.tsv.gz` - Dataset of imdb titles.
 - `title.ratings.tsv.gz` - Dataset of imdb ratings.
@@ -55,8 +55,8 @@ E.g.: `Drama` should return `Amor fatal`.
 
 You must create 3 Flask endpoints that provide the above required services. All design decisions are up to you.
 Errors must be handled (i.e. invalid user values).
-Performance optimization is absolutely not required, however excessively slow responses will be noted. Please provide
-instructions in a DOC.md on how to use your endpoints (i.e. POST, GET, query/path parameters, etc.)
+Performance optimization is not required, however excessively slow responses will be noted. Please provide
+instructions in a `DOC.md` on how to use your endpoints (i.e. POST, GET, query/path parameters, etc.)
 
 ## Docker
 
