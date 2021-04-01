@@ -62,5 +62,3 @@ instructions on how to use your endpoints (i.e. POST, GET, query/path parameters
 ## Docker
 
 Please create a Docker image to deploy your code.
-
-## Kubernetes
