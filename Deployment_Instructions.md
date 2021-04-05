@@ -83,14 +83,19 @@ Example Curl Call to Test Endpoint:
 
 Request Type:
 `GET`
+
 Headers Requrired:
 `Content-Type: application/json`
+
 Request Data Required: The follownig data is requrired to make a successful request:
 `{"title":"title_you_want_to_get_rating_for"}`
+
 Request Data Returned: The following data is returned in JSON format:
 `{'Title': title, 'Avg Rating': movie_rating }`
+
 Status Code if successful:
 `200`
+
 Example Curl Call to Test Endpoint:
 `curl -i -X GET -H "Content-Type: application/json" -d '{"title":"title_you_want_to_get_rating_for"}' http://127.0.0.1:8000/get_movie_title_rating`
 
@@ -98,14 +103,19 @@ Example Curl Call to Test Endpoint:
 
 Request Type:
 `GET`
+
 Headers Requrired:
 `Content-Type: application/json`
+
 Request Data Required: The follownig data is requrired to make a successful request:
 `{"genre":"genre_you_want_to_find_top_rating_for"}`
+
 Request Data Returned: The following data is returned in JSON format:
 `{'Genre': genre, 'Top Rated Title(s)': top_rated_title})`
+
 Status Code if successful:
 `200`
+
 Example Curl Call to Test Endpoint:
 `curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to find top rating for"}' http://127.0.0.1:8000/get_top_rated_movie_genre`
 
