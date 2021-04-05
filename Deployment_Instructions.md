@@ -1,6 +1,6 @@
-## Instructions to setup Flask Movie App
+## Instructions to Setup Flask Movie App
 
-### Datasets
+### Download Datasets
 
 Navigate to `https://datasets.imdbws.com` and download the following datasets:
 
@@ -23,11 +23,11 @@ To make the data available for use by the app, do the following:
 
 1. Rename the unzipped `title.basics.tsv.gz` file to `basics_data.tsv`:
 
-`mv /path/to/file/title.basics.tsv.gz /path_to_file/basics_data.tsv.gz`
+`mv /path/to/file/title.basics.tsv.gz /path/to/file/basics_data.tsv.gz`
 
 2. Rename the unzipped `title.ratings.tsv.gz` file to `ratings_data.tsv`:
 
-`mv /path/to/file/title.basics.tsv.gz /path/to/file/ratings_data.tsv`
+`mv /path/to/file/title.ratings.tsv.gz /path/to/file/ratings_data.tsv`
 
 3. Move the unzipped file `basics_data.tsv` to the root directory of this app:
 
@@ -39,9 +39,9 @@ To make the data available for use by the app, do the following:
 
 ### App Deployment Requirements
 
-To deploy the app to your local machine do thhe following:
+To deploy the app to your local machine do the following:
 
-1. Install Docker:
+1. Install Docker, if necessary:
 
 `https://docs.docker.com/get-docker/`
 
@@ -55,7 +55,7 @@ To deploy the app to your local machine do thhe following:
 
 4. Run Docker image as a container:
 
-`docker run --rm --name name_of_app_to_use -p 8000:5000 name_of_image:version_of_image`
+`docker run --rm --name name_of_app_to_run -p 8000:5000 name_of_image:version_of_image`
 
 ### API Endpoint Information
 
@@ -77,7 +77,7 @@ Status Code if successful:
 `200`
 
 Example Curl Call to Test Endpoint:
-`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to get count for"}' http://127.0.0.1:8000/ count_movie_titles_genres`
+`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"genre_you_want_to_get_count_for"}' http://127.0.0.1:8000/ count_movie_titles_genres`
 
 #### Endpoint 2: /get_movie_title_rating
 
@@ -117,7 +117,7 @@ Status Code if successful:
 `200`
 
 Example Curl Call to Test Endpoint:
-`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to find top rating for"}' http://127.0.0.1:8000/get_top_rated_movie_genre`
+`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"genre_you_want_to_find_top_rating_for"}' http://127.0.0.1:8000/get_top_rated_movie_genre`
 
 ## Questions
 
