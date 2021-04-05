@@ -39,15 +39,20 @@ To make the data available for use by the app, do the following:
 
 ### App Deployment Requirements
 
+To deploy the app to your local machine do thhe following:
+
 1. Install Docker:
 
 `https://docs.docker.com/get-docker/`
+
 2. Navigate to root directory of this app:
 
 `cd /path/to/code/coding_assessment/`
+
 3. Build Docker image:
 
 `docker build -t name_of_image:version_of_image .`
+
 4. Run Docker image as a container:
 
 `docker run --rm --name name_of_app_to_use -p 8000:5000 name_of_image:version_of_image`
@@ -67,7 +72,7 @@ Request Data Returned: The following data is returned in JSON format:
 Status Code if successful:
 `200`
 Example Curl Call to Test Endpoint:
-`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to get count for"}' http://127.0.0.1:8000/count_movie_titles_genres`
+`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to get count for"}' http://127.0.0.1:8000/ count_movie_titles_genres`
 
 #### Endpoint 2: /get_movie_title_rating
 
