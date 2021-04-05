@@ -17,7 +17,10 @@ def process_genres_counts(genre, file_path, columns):
     df = df.groupby('genres', as_index=False).count()
     df = df[['genres', 'tconst']]
     values = dict(zip(df.genres, df.tconst))
-    return values[genre]
+    if genre in values.keys():
+        return values[genre]
+    else:
+        return 'Provided genre does not exist in movie data'
 
 def get_movie_rating(title, data_file_paths: dict, data_columns: dict):
     df_1 = create_df(data_file_paths['basics_data_loc'], data_columns['basics_data_cols_ratings_titles'])

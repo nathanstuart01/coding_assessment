@@ -27,6 +27,10 @@ class TestHelperFunctions(unittest.TestCase):
         test_genre_count = process_genres_counts('Comedy', self.test_data_file_paths['basics_data_loc'], self.test_data_columns['basics_data_cols_genre'])
         self.assertEqual(test_genre_count, 2)
 
+    def test_process_missing_genres_counts(self):
+        test_missing_genre_count = process_genres_counts('Dragons', self.test_data_file_paths['basics_data_loc'], self.test_data_columns['basics_data_cols_genre'])
+        self.assertEqual(test_missing_genre_count, 'Provided genre does not exist in movie data')
+
     def test_get_movie_rating(self):
         test_title = 'Blacksmith Scene'
         test_movie_rating = get_movie_rating(test_title, self.test_data_file_paths, self.test_data_columns)
