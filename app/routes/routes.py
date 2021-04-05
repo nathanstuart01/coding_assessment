@@ -11,7 +11,7 @@ DATA_COLUMNS = current_app.config['DATA_COLUMNS']
 def get_count_movie_titles_genre():
     data = json.loads(request.data)
     genre = data['genre']
-    genre_count = process_genres_counts(genre, DATA_FILE_PATHS['basics_data_loc'], DATA_COLUMNS['basics_data_cols_genre'])
+    genre_count = process_genres_counts(genre)
     return jsonify({'Genre': genre, 'Count Movie Titles': genre_count}), 200
 
 @current_app.route('/get_movie_title_rating', methods=['GET'])

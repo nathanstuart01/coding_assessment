@@ -1,2 +1,2 @@
-FLASK_APP=run:create_app('production')
+FLASK_APP=run:create_app('development')
 FLASK_ENV=production

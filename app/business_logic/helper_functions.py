@@ -1,5 +1,6 @@
 import pandas as pd
 import math
+import sqlite3
 
 def create_df(file_path, columns: list, sep='\t'):
     df = pd.read_csv(file_path, usecols=columns, sep=sep)
@@ -9,16 +10,14 @@ def merge_dfs(df_1, df_2, left_on='tconst', right_on='tconst'):
     merged_df = df_1.merge(df_2, left_on=left_on, right_on=right_on)
     return merged_df
 
-def process_genres_counts(genre, file_path, columns):
-    df = create_df(file_path, columns)
-    df = df[df.titleType == 'movie']
-    df['genres'] = df['genres'].apply(lambda x: x.split(','))
-    df = df.explode('genres')
-    df = df.groupby('genres', as_index=False).count()
-    df = df[['genres', 'tconst']]
-    values = dict(zip(df.genres, df.tconst))
-    if genre in values.keys():
-        return values[genre]
+def process_genres_counts(genre):
+    conn = sqlite3.connect('movies.db')
+    cur = conn.cursor()
+    cur.execute(f"select count(*) from basics_data where genres='{genre}'")
+    rows = cur.fetchall()
+    rows = rows[0][0]
+    if rows >= 0:
+        return rows
     else:
         return 'Provided genre does not exist in movie data'
 

@@ -5,12 +5,12 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
 
 class Config(object):
+    ROOT_DIR = os.path.abspath(os.curdir)
     SECRET_KEY = os.getenv('SECRET_KEY')
     DEBUG = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     LOG_FILE = os.getenv('LOG_FILE')
     LOG_LEVEL = 'INFO'
-    ROOT_DIR = os.path.abspath(os.curdir)
     DATA_FILE_PATHS = {'basics_data_loc': f'{ROOT_DIR}' + '/basics_data.tsv', 'ratings_data_loc': f'{ROOT_DIR}' + '/ratings_data.tsv'}
     DATA_COLUMNS = {'basics_data_cols_genre': ['tconst', 'titleType', 'genres'],
                     'basics_data_cols_ratings_titles': ['tconst', 'titleType', 'primaryTitle', 'genres'],
@@ -33,7 +33,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     LOG_LEVEL = 'DEBUG'
     DATEBASE_URI = 'dev database uri'
-    SQLALCHEMY_DATABASE_URI = f'sqlite:///{Config.ROOT_DIR}/app.db'
+    SQLALCHEMY_DATABASE_URI = f'sqlite:///{Config.ROOT_DIR}/movies.db'
 
     DATA_FILE_PATHS = {'basics_data_loc': f'{Config.ROOT_DIR}' + '/tests/test_data/test_basics_data.tsv',
                         'ratings_data_loc': f'{Config.ROOT_DIR}' + '/tests/test_data/test_ratings_data.tsv'}
