@@ -20,6 +20,7 @@ Reference: `https://linuxize.com/post/how-to-unzip-gz-file/`
 #### Renaming and Moving
 
 To make the data available for use by the app, do the following:
+
 1.Rename the unzipped `title.basics.tsv.gz` file to `basics_data.tsv`:
 
 `mv /path/to/file/title.basics.tsv.gz /path_to_file/basics_data.tsv.gz`
@@ -27,20 +28,28 @@ To make the data available for use by the app, do the following:
 2.Rename the unzipped `title.ratings.tsv.gz` file to `ratings_data.tsv`:
 
 `mv /path/to/file/title.basics.tsv.gz /path/to/file/ratings_data.tsv`
+
 3.Move the unzipped file `basics_data.tsv` to the root directory of this app:
+
 `mv /path/to/file/basics_data.tsv /path/to/code/coding_assessment/basics_data.tsv`
+
 4.Move the unzipped file `ratings_data.tsv` to the root directory of this app:
+
 `mv /path/to/file/ratings_data.tsv /path/to/code/coding_assessment/ratings_data.tsv`
 
 ### App Deployment Requirements
 
-1.Install Docker:
+1. Install Docker:
+
 `https://docs.docker.com/get-docker/`
-2.Navigate to root directory of this app:
+2. Navigate to root directory of this app:
+
 `cd /path/to/code/coding_assessment/`
-3.Build Docker image:
+3. Build Docker image:
+
 `docker build -t name_of_image:version_of_image .`
-4.Run Docker image as a container:
+4. Run Docker image as a container:
+
 `docker run --rm --name name_of_app_to_use -p 8000:5000 name_of_image:version_of_image`
 
 ### API Endpoint Information
