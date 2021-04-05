@@ -11,3 +11,4 @@ basics_data.tsv
 ratings_data.tsv
 basics_data.tsv.gz
 ratings_data.tsv.gz
+movies.db
