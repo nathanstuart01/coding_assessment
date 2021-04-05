@@ -21,19 +21,19 @@ Reference: `https://linuxize.com/post/how-to-unzip-gz-file/`
 
 To make the data available for use by the app, do the following:
 
-1.Rename the unzipped `title.basics.tsv.gz` file to `basics_data.tsv`:
+1. Rename the unzipped `title.basics.tsv.gz` file to `basics_data.tsv`:
 
 `mv /path/to/file/title.basics.tsv.gz /path_to_file/basics_data.tsv.gz`
 
-2.Rename the unzipped `title.ratings.tsv.gz` file to `ratings_data.tsv`:
+2. Rename the unzipped `title.ratings.tsv.gz` file to `ratings_data.tsv`:
 
 `mv /path/to/file/title.basics.tsv.gz /path/to/file/ratings_data.tsv`
 
-3.Move the unzipped file `basics_data.tsv` to the root directory of this app:
+3. Move the unzipped file `basics_data.tsv` to the root directory of this app:
 
 `mv /path/to/file/basics_data.tsv /path/to/code/coding_assessment/basics_data.tsv`
 
-4.Move the unzipped file `ratings_data.tsv` to the root directory of this app:
+4. Move the unzipped file `ratings_data.tsv` to the root directory of this app:
 
 `mv /path/to/file/ratings_data.tsv /path/to/code/coding_assessment/ratings_data.tsv`
 
