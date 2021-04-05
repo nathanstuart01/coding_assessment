@@ -1,0 +1,13 @@
+.env
+env/*
+.env
+.vscode/
+__pycache__/
+.python_history
+.bash_history
+.cache/*
+.DS_Store
+basics_data.tsv
+ratings_data.tsv
+basics_data.tsv.gz
+ratings_data.tsv.gz
