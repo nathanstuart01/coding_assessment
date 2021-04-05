@@ -7,8 +7,6 @@ logger = logging.getLogger('routes_logger')
 DATA_FILE_PATHS = current_app.config['DATA_FILE_PATHS']
 DATA_COLUMNS = current_app.config['DATA_COLUMNS']
 
-# provide the following to call the current route:
-#curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to get count for"}' http://127.0.0.1:8000/count_movie_titles_genres
 @current_app.route('/count_movie_titles_genres', methods=['GET'])
 def get_count_movie_titles_genre():
     data = json.loads(request.data)
@@ -16,8 +14,6 @@ def get_count_movie_titles_genre():
     genre_count = process_genres_counts(genre, DATA_FILE_PATHS['basics_data_loc'], DATA_COLUMNS['basics_data_cols_genre'])
     return jsonify({'Genre': genre, 'Count Movie Titles': genre_count}), 200
 
-# provide the following to call the current route:
-#curl -i -X GET -H "Content-Type: application/json" -d '{"title":"Title you want to get rating for"}' http://127.0.0.1:8000/get_movie_title_rating
 @current_app.route('/get_movie_title_rating', methods=['GET'])
 def get_movie_title_rating():
     data = json.loads(request.data)
@@ -25,8 +21,6 @@ def get_movie_title_rating():
     movie_rating = get_movie_rating(title, DATA_FILE_PATHS, DATA_COLUMNS)
     return jsonify({'Title': title, 'Avg Rating': movie_rating }), 200
 
-# provide the following to call the current route:
-#curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to find top rating for"}' http://127.0.0.1:8000/get_top_rated_movie_genre
 @current_app.route('/get_top_rated_movie_genre', methods=['GET'])
 def get_top_rated_movie_title_genre():
     data = json.loads(request.data)
