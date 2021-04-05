@@ -49,11 +49,13 @@ To deploy the app to your local machine do the following:
 
 `cd /path/to/code/coding_assessment/`
 
-3. Build Docker image:
+3.  Copy the values within the `.example.env` file and save as `.env` in your root directory
+
+4. Build Docker image:
 
 `docker build -t name_of_image:version_of_image .`
 
-4. Run Docker image as a container:
+5. Run Docker image as a container:
 
 `docker run --rm --name name_of_app_to_run -p 8000:5000 name_of_image:version_of_image`
 
@@ -77,7 +79,7 @@ Status Code if successful:
 `200`
 
 Example Curl Call to Test Endpoint:
-`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"genre_you_want_to_get_count_for"}' http://127.0.0.1:8000/ count_movie_titles_genres`
+`curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"genre_you_want_to_get_count_for"}' http://127.0.0.1:8000/count_movie_titles_genres`
 
 #### Endpoint 2: /get_movie_title_rating
 
