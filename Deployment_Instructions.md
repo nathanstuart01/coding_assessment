@@ -63,14 +63,19 @@ To deploy the app to your local machine do thhe following:
 
 Request Type:
 `GET`
+
 Headers Requrired:
 `Content-Type: application/json`
+
 Request Data Required: The follownig data is requrired to make a successful request:
 `{"genre":"genre_you_want_to_get_count_for"}`
+
 Request Data Returned: The following data is returned in JSON format:
 `{'Genre': genre_you_provided, 'Count Movie Titles': genre_you_provided_count}`
+
 Status Code if successful:
 `200`
+
 Example Curl Call to Test Endpoint:
 `curl -i -X GET -H "Content-Type: application/json" -d '{"genre":"Genre you want to get count for"}' http://127.0.0.1:8000/ count_movie_titles_genres`
 
