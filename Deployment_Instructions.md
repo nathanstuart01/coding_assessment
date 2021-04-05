@@ -67,7 +67,7 @@ Request Type:
 Headers Requrired:
 `Content-Type: application/json`
 
-Request Data Required: The following data is requrired to make a successful request:
+Request Data Required: The following data is required to make a successful request:
 `{"genre":"genre_you_want_to_get_count_for"}`
 
 Request Data Returned: The following data is returned in JSON format:
@@ -87,7 +87,7 @@ Request Type:
 Headers Requrired:
 `Content-Type: application/json`
 
-Request Data Required: The following data is requrired to make a successful request:
+Request Data Required: The following data is required to make a successful request:
 `{"title":"title_you_want_to_get_rating_for"}`
 
 Request Data Returned: The following data is returned in JSON format:
@@ -107,7 +107,7 @@ Request Type:
 Headers Requrired:
 `Content-Type: application/json`
 
-Request Data Required: The following data is requrired to make a successful request:
+Request Data Required: The following data is required to make a successful request:
 `{"genre":"genre_you_want_to_find_top_rating_for"}`
 
 Request Data Returned: The following data is returned in JSON format:
